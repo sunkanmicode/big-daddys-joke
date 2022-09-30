@@ -94,9 +94,7 @@ const HomeComponent = ({
         </View>
       </View>
       {openSearchBox && (
-        // <View style={{ alignSelf: "center" }}>
         <SearchDropDown filterList={filterList} setFilterList={setFilterList} />
-        // {/* </View> */}
       )}
 
       <CategoryList />

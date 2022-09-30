@@ -18,7 +18,6 @@ const ROOT_URL = "https://api.chucknorris.io/";
         type: GET_CATEGORIES_LIST_SUCCESS,
         payload: res.data,
       });
-      // console.log(res.data, "categoriesAPI");
     })
     .catch((err) => {
       dispatch({
@@ -27,6 +26,5 @@ const ROOT_URL = "https://api.chucknorris.io/";
           ? err.response.data
           : { error: "something went wrong" },
       });
-      // console.log(error, 'something went wrong');
     });
 };

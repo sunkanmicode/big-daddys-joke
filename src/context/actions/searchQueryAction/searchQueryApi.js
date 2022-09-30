@@ -15,7 +15,6 @@ export default (query) => (dispatch) => {
         type: GET_SEARCH_QUERY_SUCCESS,
         payload: res.data,
       });
-      // console.log(res.data.result, "queryAPI");
     })
     .catch((err) => {
       dispatch({

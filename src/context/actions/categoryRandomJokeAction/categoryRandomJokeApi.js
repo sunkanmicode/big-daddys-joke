@@ -18,7 +18,6 @@ export default (category) => (dispatch) => {
         type: GET_CATEGORIES_DETAIL_SUCCESS,
         payload: res.data,
       });
-      // console.log(res.data, "categoriesAPI");
     })
     .catch((err) => {
       dispatch({
@@ -27,6 +26,5 @@ export default (category) => (dispatch) => {
           ? err.response.data
           : { error: "something went wrong" },
       });
-      // console.log(error, 'something went wrong');
     });
 };
