@@ -1,4 +1,3 @@
-import { View, Text, StyleSheet } from 'react-native'
 import React, { useContext } from 'react'
 import HomeComponent from '../../components/screensComponents/HomeComponent';
 import { GlobalContext } from '../../context/Provider';
@@ -12,7 +11,7 @@ const HomeScreen = () => {
   const [openSearchBox, setSearchOpenBox] = React.useState(false);
   const [filterList, setFilterList] = React.useState([])
 
-
+//state for categories
    const {
      categoriesDispatch,
      categoriesState: {
@@ -20,6 +19,7 @@ const HomeScreen = () => {
      },
    } = useContext(GlobalContext);
 
+   //states for categories Detail
     const {
       categoriesDetailDispatch,
       categoriesDetailState: {
@@ -27,7 +27,7 @@ const HomeScreen = () => {
       },
     } = useContext(GlobalContext);
 
-    
+    // search query states
   const {
     searchQueryDispatch,
     searchQueryState: {
@@ -35,11 +35,11 @@ const HomeScreen = () => {
     }
   } = useContext(GlobalContext);
 
-  console.log(getSearchQuery.data, "getSearchQuery");
+  // console.log(getSearchQuery.data, "getSearchQuery");
 
 
+  // textinput for search query
      const handleOnSearch = (text) => {
-       // console.log(text, 'text')
        if (text) {
          setSearchOpenBox(true);
          const newFilter = getSearchQuery?.data?.result?.filter((item)=>{
@@ -52,16 +52,10 @@ const HomeScreen = () => {
      };
 
 
-  //  console.log({ data, loading, error }, "getCategories234");
-
+//button for random jokes 
   const getCategoryDetailJoke = (id) => {
     categoryRandomJokeApi(id)(categoriesDetailDispatch);
   };
-
-  //  React.useEffect(() => {
-  //    // searchActionApi();
-  //  }, []);
-   
 
    React.useEffect(()=>{
      searchQueryApi()(searchQueryDispatch);

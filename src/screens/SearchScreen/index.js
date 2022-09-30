@@ -19,10 +19,7 @@ const SearchScreen = () => {
 
   console.log({data, loading, error}, "searchQueryState345");
 
-  // const getSearchJokes = (value) => {
-  //   console.log(filterList, "value");
-  //   // searchQueryApi(value)(searchQueryDispatch);
-  // };
+ 
 
     console.log(value, "value");
 
