@@ -22,14 +22,9 @@ const DetailScreen = () => {
   };
 
   React.useEffect(()=>{
-    // const interval = setInterval(() => {
-    //   categoryRandomJokeApi(item)(categoriesDetailDispatch);
-    // }, 15000);
-    // return () => clearInterval(interval);
     categoryDetailJoke();
   },[])
 
-  // console.log({ data, loading, error }, "categoriesDetailState");
 
   return (
     <DetailComponent

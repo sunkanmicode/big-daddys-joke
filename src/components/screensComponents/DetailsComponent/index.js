@@ -24,14 +24,9 @@ const DetailComponent = ({
               name="arrowleft"
               size={24}
               color="black"
-              onPress={() => {
-                // navigation.goBack();
-                navigate.goBack();
-              }}
             />
           </TouchableOpacity>
           <Text style={styles.headerText}>{item}</Text>
-          {/* <View /> */}
           <FontAwesome5 name="laugh-squint" size={24} color="black" />
         </View>
         <View style={styles.jokeContainer}>

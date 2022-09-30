@@ -10,25 +10,22 @@ import searchQueryInitialState from "./initialStates/searchQueryInitialState";
 export const GlobalContext = createContext({});
 
 const GlobalProvider = ({ children }) => {
+  //categories
   const [categoriesState, categoriesDispatch] = useReducer(
     categoriesReducer,
     categoryInitialState
   );
+  // categories Detail
   const [categoriesDetailState, categoriesDetailDispatch] = useReducer(
     categoryDetailReducer,
     categoryDetailInitialState
   );
  
+  //search query
   const [searchQueryState, searchQueryDispatch] = useReducer(
     searchQueryReducer,
     searchQueryInitialState
   );
-  // console.log(searchQueryState, "searchListState");
-  // console.log(categoriesState, "categoriesState");
-  // console.log(categoriesDetailState, "categoriesDetailState");
-  // console.log(searchListState, "searchListState");
-
-
 
 
   return (
