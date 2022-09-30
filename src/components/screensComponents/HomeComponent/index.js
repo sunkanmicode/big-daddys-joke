@@ -18,7 +18,6 @@ const HomeComponent = ({
   data,
   loading,
   error,
-  navigation,
   getCategoryDetailJoke,
   openSearchBox,
   setSearchOpenBox,
@@ -31,7 +30,10 @@ const HomeComponent = ({
 
   const CategoryList = () => {
     return (
-      <ScrollView style={styles.categoryListContainer}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={styles.categoryListContainer}
+      >
         {loading ? (
           <ActivityIndicator />
         ) : (
@@ -77,18 +79,8 @@ const HomeComponent = ({
         </View>
       </View>
       <View style={styles.searchInput}>
-        <TouchableOpacity
-          style={styles.searchContainer}
-          // onPress={() => {
-          //   navigate("Search");
-          // }}
-        >
-          {/* <Feather
-            name="search"
-            size={24}
-            color="black"
-            style={{ marginLeft: 20 }}
-          /> */}
+        <TouchableOpacity style={styles.searchContainer}>
+          
           <TextInput
             placeholder="Search"
             style={styles.input}
